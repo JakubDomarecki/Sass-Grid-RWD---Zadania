@@ -100,3 +100,67 @@
   border-radius: 50%;
   box-shadow: 0 0 50px rgba(247, 215, 76, 0.2);
 }
+
+
+@keyframes fly-1 {
+  0%{
+    transform: rotate(0);
+  }
+  20%{
+    transform: rotate(120deg);
+  }
+  90%{
+    left: 170px;
+    top: 120px;
+  }
+  100%{
+    transform: rotate(0);
+    left: 170px;
+    top: 120px;
+  }
+}
+
+.rocket{
+  animation-name: fly-1, fly-2, fly-3;
+  animation-duration: 3s, 3s, 5s;
+  animation-delay: 0s, 4s, 8s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+
+@keyframes fly-2 {
+  0%{
+    transform: rotate(0);
+  }
+  20%{
+    transform: rotate(90deg);
+  }
+  90%{
+    left: 870px;
+    top: 170px;
+  }
+  100%{
+    transform: rotate(0);
+    left: 870px;
+    top: 170px;
+  }
+}
+
+@keyframes fly-3 {
+  0%{
+    transform: rotate(0);
+  }
+  20%{
+    transform: rotate(180deg);
+  }
+  90%{
+    left: 740px;
+    top: 600px;
+  }
+  100%{
+    transform: rotate(0);
+    left: 740px;
+    top: 600px;
+  }
+}

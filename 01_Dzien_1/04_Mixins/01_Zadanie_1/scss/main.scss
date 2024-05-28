@@ -79,3 +79,13 @@ header {
 .dialog__text {
   font-size: 14px;
 }
+
+
+@mixin headerFont($font-size){
+  font-size: $font-size;
+  line-height: 2em;
+  font-weight: 700;
+}
+header{
+  @include headerFont(20px);
+}

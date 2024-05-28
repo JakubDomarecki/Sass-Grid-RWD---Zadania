@@ -1,0 +1,25 @@
+@use 'sass:map';
+@use 'sass:list';
+
+$font-sizes: (
+        fs1: 100px,
+        fs2: 50px,
+        fs3: 6px,
+);
+
+$values: map.values($font-sizes);
+
+@for $i from 1 through 3{
+  h#{$i}{
+    font-size: list.nth($values, 4 - $i);
+  }
+}
+
+//@for $i from 3 through 1{
+//  h#{$i}{
+//    font-size: list.nth($values, $i);
+//  }
+//}
+
+
+

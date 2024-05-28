@@ -1,0 +1,10 @@
+@import "../settings/all";
+@import "../settings/colors";
+body {
+  font-family: $font-base;
+}
+.site__container {
+  max-width: 800px;
+  background: $color-bg-secondary;
+  margin: 40px auto;
+}

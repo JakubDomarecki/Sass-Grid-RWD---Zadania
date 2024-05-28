@@ -1,0 +1,20 @@
+.flex-container-column{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+header{
+  background-color: lightcoral;
+  height: 300px;
+  width: 100%;
+}
+main{
+  overflow: auto;
+  background-color: lightblue;
+}
+footer{
+  background-color: lightgreen;
+  height: 300px;
+  width: 100%;
+}
+

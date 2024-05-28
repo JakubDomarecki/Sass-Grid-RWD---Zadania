@@ -1,0 +1,15 @@
+@use 'sass:math';
+
+@for $i from 1 through 10{
+  .block_#{$i}{
+    border: 1px solid;
+    height: 20px;
+    margin-bottom: 2px;
+    @if $i % 2 == 0{
+      border-color: orange;
+    }
+    @else{
+      border-color: blue;
+    }
+  }
+}

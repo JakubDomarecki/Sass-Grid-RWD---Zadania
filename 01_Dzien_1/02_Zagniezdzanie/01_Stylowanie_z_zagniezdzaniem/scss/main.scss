@@ -1,0 +1,73 @@
+$primary-color: cornflowerblue;
+$accent-color: tomato;
+$main-width: 1000px;
+
+.menu {
+  display: flex;
+  gap: 30px;
+  padding-left: 10px;
+  background-color: $primary-color;
+}
+
+header {
+  border: 2px solid;
+  border-image: linear-gradient(to right, grey 25%, yellow 25%, yellow 50%, red 50%, red 75%, teal 75%) 5;
+  //border-color: $primary-color $accent-color $primary-color $accent-color;
+}
+
+//.main-width ul li:first-child {
+//  color: red;
+//}
+
+.main-width {
+  max-width: $main-width;
+  width: 100%;
+  ul {
+    position: relative;
+
+    li {
+      &:first-child {
+        color: red;
+      }
+    }
+  }
+}
+
+footer {
+  .menu {
+    justify-content: flex-start;
+  }
+  ul {
+    position: relative;
+    li {
+      transition: all 400ms ease-in-out;
+      &:first-child {
+        color: red;
+      }
+      &:last-child {
+        position: absolute;
+        right: 10px;
+      }
+      &:hover {
+        color: gold;
+        background-color: black;
+      }
+    }
+  }
+}
+
+ul.magic {
+  li {
+    &:hover {
+      color: red;
+    }
+
+    &:first-child {
+      color: orange;
+    }
+
+    &:last-child {
+      color: green;
+    }
+  }
+}

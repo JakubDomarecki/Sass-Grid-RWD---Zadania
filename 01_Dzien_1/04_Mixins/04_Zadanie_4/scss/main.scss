@@ -1,0 +1,47 @@
+//::-webkit-input-placeholder
+//:-moz-placeholder
+//::-moz-placeholder
+//:-ms-input-placeholder
+
+@mixin placeholder{
+  &::placeholder{
+    @content
+  }
+  &::-webkit-input-placeholder{
+    @content
+  }
+  &:-moz-placeholder{
+    @content
+  }
+  &::-moz-placeholder{
+    @content;
+  }
+  &:-ms-input-placeholder{
+    @content;
+  }
+}
+
+.my-form {
+  input, textarea{
+    @include  placeholder{
+      color: red;
+    }
+  }
+}
+
+////w cssie
+//.my-form input::placeholder{
+//  color: red;
+//}
+//.my-form textarea::placeholder{
+//  color: red;
+//}
+////dla starego
+//.my-form input::-webkit-input-placeholder{
+//  color: red;
+//}
+//.my-form input:-moz-placeholder{
+//  color: red;
+//}
+
+//Love and hate mixin(daje zawsze te same wartosci na wszystkie4)

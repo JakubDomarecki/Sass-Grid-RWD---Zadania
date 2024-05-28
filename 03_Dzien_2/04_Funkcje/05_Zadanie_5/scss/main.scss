@@ -1,0 +1,22 @@
+@use 'sass:math';
+
+@function  sum($number1, $number2) {
+  $result: $number1 + $number2;
+  @return $result;
+}
+
+
+$base-font-size: 16px;
+@function rem($px, $base: $base-font-size){
+  @return math.div($px, $base-font-size) * 1rem;
+}
+
+html, body{
+  font-size: $base-font-size;
+}
+
+article{
+  margin: rem(42px);
+  padding: sum(10px, 20px);
+}
+

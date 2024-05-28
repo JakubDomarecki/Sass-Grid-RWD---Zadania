@@ -1,0 +1,8 @@
+@use 'sass:color';
+
+$light-red: color.scale(#FF0000, $lightness: 40%);
+@debug  $light-red;
+
+h1{
+  color: $light-red;
+}

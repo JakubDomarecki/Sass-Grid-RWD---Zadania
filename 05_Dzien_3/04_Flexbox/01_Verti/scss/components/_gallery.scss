@@ -1,0 +1,73 @@
+@import "../variables";
+@import "../utility/functions";
+
+.gallery{
+  margin-bottom: rem(52px);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  row-gap: 50px;
+  @include mq(lg) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &_article{
+
+  }
+  &_img{
+    width: 100%;
+    @include mq(lg) {
+      max-width: rem(439.98px);
+      width: 100%;
+      height: rem(348.32px);
+      border-radius: 6px 0;
+
+    }
+  }
+  &_box {
+    width: 100%;
+    box-sizing: border-box;
+    padding: rem(29.3px);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 0px 0px;
+    @include mq(lg) {
+    background-color: $color-ternary;
+    max-width: rem(439.98px);
+      width: 100%;
+    padding: rem(64px) rem(32px) rem(48px);
+    box-sizing: border-box;
+    border-radius: 0 6px;
+    }
+  }
+  &__hdl{
+
+  }
+  &_h2{
+    margin: 0;
+    color: $color-secondary-dark;
+    font-family: "OpenSans Extra Bold", sans-serif;
+    margin-bottom: rem(5.85px);
+    font-size: rem(19.8px);
+    @include mq(lg){
+      font-size: rem(23.4px);
+    }
+  }
+  &_hdl_p{
+    font-size: rem(14.6667px);
+    font-family: "OpenSans Light", sans-serif;
+    color: $color-secondary;
+    margin: 0;
+    @include mq(lg){
+      font-size: rem(17.3px);
+    }
+  }
+  &_p{
+    color: $color-secondary;
+    font-size: rem(14.6667px);
+    font-family: "OpenSans Light", sans-serif;
+    line-height: rem(39px);
+    @include mq(lg){
+      font-size: rem(17.3px);
+    }
+  }
+}

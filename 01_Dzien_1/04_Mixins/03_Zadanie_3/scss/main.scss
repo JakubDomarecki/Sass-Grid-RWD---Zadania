@@ -1,0 +1,44 @@
+//button[disabled]:hover{
+//  background-color: red;
+//}
+
+@mixin disabledhover(){
+  &[disabled]{
+    text-decoration: underline;
+    &:hover{
+      @content;
+    }
+  }
+}
+button{
+  @include disabledhover{
+    color: red;
+    background: transparent;
+    border: 0;
+    text-decoration: none;
+  }
+}
+
+////output css bez mixina
+//button{
+//  &[disabled]{
+//    text-decoration: underline;
+//    &:hover{
+//      color: red;
+//      background: transparent;
+//      border: 0;
+//      text-decoration: none;
+//    }
+//  }
+//}
+////output css
+//button[disabled]{
+//  text-decoration: underline;
+//}
+//button[disabled]:hover{
+//  color: red;
+//  background: transparent;
+//  border: 0;
+//  text-decoration: none;
+//}
+

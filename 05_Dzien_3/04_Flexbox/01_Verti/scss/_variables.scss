@@ -1,0 +1,45 @@
+@use 'sass:math';
+
+$fonts: (
+        "OpenSans Bold": opensans-bold-webfont,
+        "OpenSans Bold Italic": opensans-bolditalic-webfont,
+        "OpenSans Extra Bold": opensans-extrabold-webfont,
+        "OpenSans Extra Bold Italic": opensans-extrabolditalic-webfont,
+        "OpenSans Italic": opensans-italic-webfont,
+        "OpenSans Light": opensans-light-webfont,
+        "OpenSans Light Italic": opensans-lightitalic-webfont,
+        "OpenSans Regular": opensans-regular-webfont,
+        "OpenSans Semi Bold": opensans-semibold-webfont,
+        "OpenSans Semi Bold Italic": opensans-semibolditalic-webfont,
+        "Oleo Script Regular": oleoscript-regular-webfont,
+);
+
+$font-path: '../assets/fonts/';
+
+$font-base-size: 16px;
+
+$img-path: '../assetes/images/';
+
+$icon-path: '../assets/icons/';
+
+$color-primary: rgb(0, 144, 197);
+$color-secondary: rgb(105, 105, 105);
+$color-secondary-dark: rgb(68, 68, 68);
+$color-ternary: rgb(255, 255, 255);
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);
+
+$columns: 12;
+
+@for $i from 1 through $columns{
+   %col-#{$i}{
+      width: math.percentage(math.div($i, $columns));
+   }
+}

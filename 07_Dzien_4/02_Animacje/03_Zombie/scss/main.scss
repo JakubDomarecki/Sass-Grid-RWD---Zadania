@@ -12,7 +12,15 @@ body {
   background: rgb(0, 0, 0) url(../images/board-bg.jpg) center bottom;
 
   .zombie {
-
+    width: 2000px;
+    height: 312px;
+    background-image: url("../images/walkingdead.png");
+    animation: play 0.8s steps(10);
+    animation-iteration-count: infinite;
   }
+}
+
+@keyframes play {
+  100% { background-position: -2000px; }
 }
 

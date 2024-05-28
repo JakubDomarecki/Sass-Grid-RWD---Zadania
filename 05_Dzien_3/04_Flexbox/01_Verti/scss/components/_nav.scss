@@ -1,0 +1,41 @@
+@import "../utility/mixins";
+@import "../utility/functions";
+@import "../variables";
+
+%menu-item{
+  color: $color-secondary;
+  text-decoration: none;
+  font-family: "OpenSans Extra Bold", sans-serif;
+}
+
+%menu-item-active{
+  color: $color-ternary;
+  background-color: $color-secondary;
+}
+
+.nav{
+  display: flex;
+  column-gap: rem(24.4px);
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  @include mq (lg){
+    flex-direction: row;
+    width: auto;
+  }
+  &__item{
+    padding: rem(7.14px) rem(14.4px);
+    border-radius: rem(6px);
+    transition: all 400ms;
+    @extend %menu-item;
+    @include pseudo-classes($color-secondary, $color-ternary){
+      @extend %menu-item;
+    }
+  }
+  &__item--active{
+    @extend %menu-item-active;
+    @include pseudo-classes($color-ternary, $color-secondary){
+      @extend %menu-item-active;
+    }
+  }
+}

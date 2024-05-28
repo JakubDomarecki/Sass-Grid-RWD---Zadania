@@ -1,0 +1,58 @@
+@import "../variables";
+
+.main{
+  background-color: $color-ternary;
+  border-bottom-color: $color-secondary;
+  padding: rem(86.667px) 0  ;
+  &_container{
+  display: flex;
+    flex-direction: column-reverse;
+    @include mq(lg) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  &_photos{
+    width: 100%;
+    @include mq(lg) {
+      width: 33.3%;
+    }
+  }
+  &_images{
+    margin-bottom: rem(50px);
+    text-align: center;
+  }
+  &_description{
+    width: 100%;
+    @include mq(lg) {
+      width: 66.6%;
+    }
+  }
+  &_image{
+    width: 390px;
+    height: 219px;
+    @include mq(lg) {
+      width: 180px;
+      height: 101px;
+    }
+  }
+  &__button--primary{
+
+  }
+  &__button{
+    @extend %btn-primary;
+    padding: rem(14.04px) rem(35.1px);
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: "OpenSans Extra Bold", sans-serif;
+    display: block;
+    text-align: center;
+    font-size: rem(19.8px);
+    @include mq(lg) {
+      display: inline-block;
+      font-size: rem(23.4px);
+    }
+  }
+
+}

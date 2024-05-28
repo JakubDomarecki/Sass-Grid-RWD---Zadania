@@ -1,0 +1,59 @@
+@import "../utility/functions";
+@import "../variables";
+
+
+@mixin btn($icon, $icon-position, $is-primary: false) {
+  background-color: #f2f2f2;
+  color: $color-secondary-dark;
+  font-family: "OpenSans Extra Bold", sans-serif;
+  font-size: rem(39px);
+  padding: rem(31.1px) rem(35.1px);
+  border-radius: rem(6px);
+  text-decoration: none;
+  margin-bottom: rem(19.5px);
+  transition: all 400ms;
+  position: relative;
+
+  @if $is-primary{
+    background-color: $color-primary;
+    color: $color-ternary;
+  }
+
+  &::before, &::after {
+
+    width: rem(39px);
+    height: rem(39px);
+    display: inline-block;
+    background-image: url("#{$icon-path}fa-#{$icon}.svg");
+    background-size: cover;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @if $icon-position == left {
+    text-align: center;
+    vertical-align: center;
+    &::before {
+      content: "";
+      position: relative;
+      left: rem(-16px);
+    }
+  } @else {
+    padding-right: rem(90px);
+    &::after {
+      content: "";
+      position: absolute;
+      right: rem(35.1px);
+    }
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+}
+
+%btn-primary {
+  background-color: $color-primary;
+  color: $color-ternary;
+}

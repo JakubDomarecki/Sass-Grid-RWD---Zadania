@@ -1,0 +1,39 @@
+@use "sass:map";
+@import "../variables";
+
+
+@mixin pseudo-classes($color, $bg-color){
+  &:link{
+    @content;
+  }
+  &:visited{
+    @content;
+  }
+  &:hover{
+    @content;
+    color: $color;
+    background-color: $bg-color;
+  }
+  &:active{
+    @content;
+  }
+}
+
+
+@mixin mq($breakpoint){
+  $key: map.has-key($grid-breakpoints, $breakpoint);
+
+  $value: 0 ;
+
+  @if $key {
+    $value: map.get($grid-breakpoints, $breakpoint);
+  } @else{
+    @warn "Key: #{$breakpoint}, not found. Try to use: #{map.keys($grid-breakpoints)}";
+  }
+
+
+
+  @media screen and (min-width: $value){
+    @content
+  }
+}

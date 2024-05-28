@@ -1,0 +1,17 @@
+@use "sass:map";
+
+$colors: (
+        color-red: red,
+        color-blue: blue,
+        color-green: green,
+        color-black: black,
+        color-pink: pink
+);
+
+body{
+  background-color: map.get($colors, color-red);
+  color: map.get($colors, color-black);
+}
+footer{
+  background-color: map.get($colors, color-pink);
+}

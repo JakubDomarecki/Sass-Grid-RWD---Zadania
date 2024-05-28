@@ -1,0 +1,17 @@
+@use 'sass:list';
+@use 'sass:math';
+@use 'sass:color';
+
+$headline: 1.6, 24px;
+
+@for $i from 1 through 6 {
+  h#{$i}{
+    font-size: list.nth($headline, 2) - $i;
+    line-height: list.nth($headline, 1);
+    color: color.mix(tomato, cornflowerblue, 10% * $i);
+  }
+}
+
+
+
+

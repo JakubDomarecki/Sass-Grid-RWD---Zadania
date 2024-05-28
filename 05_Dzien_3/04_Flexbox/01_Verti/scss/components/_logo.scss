@@ -1,0 +1,28 @@
+@import "../utility/functions";
+@import "../variables";
+@import "../utility/mixins";
+
+.logo{
+  display: flex;
+  column-gap: rem(24px);
+  align-items: center;
+  text-decoration: none;
+  &__brand{
+    background-color: rgb(255, 68, 134);
+    color: $color-ternary;
+    display: inline-block;
+    border-radius: rem(6px);
+    padding: rem(6px) rem(10.4px);
+    font-size: rem(52px);
+    font-family: "Oleo Script Regular", sans-serif;
+    letter-spacing: rem(2.6px);
+    line-height: 1;
+  }
+  &__text{
+    font-size: rem(14.4px);
+    font-family: "OpenSans Extra Bold", sans-serif;
+    color: $color-secondary;
+    letter-spacing: rem(.36px);
+
+  }
+}

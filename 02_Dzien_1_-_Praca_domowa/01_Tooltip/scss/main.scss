@@ -1,0 +1,21 @@
+@mixin setToolTip($text, $color) {
+  position: relative;
+  cursor: pointer;
+  &:hover::after {
+    position: absolute;
+    display: block;
+    content: $text;
+    color: $color;
+    font-size: 20px;
+    padding: 10px;
+    background-color: lightcyan;
+    border-radius: 4px;
+    bottom: 0;
+    left: 0;
+    transform: translate(0%, 100%);
+  }
+}
+
+ul.list {
+  @include setToolTip('u mnie działa', red);
+}

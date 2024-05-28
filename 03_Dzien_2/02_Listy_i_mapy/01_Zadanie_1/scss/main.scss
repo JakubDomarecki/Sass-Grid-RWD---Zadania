@@ -1,0 +1,40 @@
+@use 'sass:list';
+@use 'sass:map';
+
+//1rozwiazanie
+$colors: lightblue, cyan, red;
+$widths:(header: 300px, body:500px, "section.mai-width": 200px);
+
+
+body{
+  background-color: list.nth($colors, 1);
+  width: map.get($widths, body);
+}
+
+header{
+  background-color: list.nth($colors, 2);
+  width: map.get($widths, header);
+}
+
+section.main-width{
+  background-color: list.nth($colors, 3);
+  width: map.get($widths, "section.mai-width");
+}
+
+////ciezkie rozwiazanie
+//$elements: (
+//        header: (300px, blue),
+//        body:(500px, red),
+//        "section.main-width": (200px, green)
+//);
+//
+//@each $selector, $values in $elements{
+// #{$selector} {
+//    width: list.nth($values, 1);
+//    background-color: list.nth($values, 2);
+//  }
+//}
+//
+
+
+

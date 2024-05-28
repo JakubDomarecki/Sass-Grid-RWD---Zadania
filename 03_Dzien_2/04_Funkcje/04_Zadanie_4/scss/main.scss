@@ -1,0 +1,12 @@
+@use 'sass:color';
+
+$color-primary: peru;
+$color-secondary: lightcoral;
+
+$mixed: color.mix($color-primary, $color-secondary);
+
+section.content{
+  background-color: $mixed;;
+}
+
+
